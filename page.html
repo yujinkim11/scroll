@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap{
+            height: 300vh;
+            float: left;
+        }
+
+        header{
+            width: 100%;
+            height: 80px;
+            background-color: lightgray;
+            position: fixed;
+            top: 0;
+            left: 0%;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .container{
+            width: 1000px;
+            height: 500px;
+            background-color: midnightblue;
+            margin: 200px auto;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: dodgerblue;
+            margin: 0 auto;
+            transition-duration: 0.5s;
+        }
+
+
+        .active{
+            background-color: rgba(0, 0, 0, 0.5);            
+        }
+
+        .round{
+            transform: scale(2);
+            border-radius: 50%;       
+            background-color: coral;     
+        }
+
+        .gauge_box{            
+            height: 5px;
+            background-color: lightblue;
+        }
+        
+        .gauge{
+            width: 0%;
+            height: 100%;
+            background-color: blue;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="wrap">
+
+        <header>
+
+        <div class="gauge_box">
+            <div class="gauge"></div>
+        </div>
+
+    </header>
+
+        <div class="container"></div>
+
+        <div class="box"></div>
+
+    </div>
+
+    <!-- <script>
+
+        // const gaugeWrap = document.querySelector('.gauge_box');
+        // const bar = document.querySelector('.guage');
+
+
+        // const handleScroll = () => {
+            
+        //     const scrollBar = window.getBoundingClientRect();
+
+        //     if(scrollBar > 0){
+        //         bar.
+        //     }
+
+        // }
+
+
+
+        // window.addEventListener('scroll', handleScroll)
+        
+
+    </script> -->
+    <script src="js/page_Event.js"></script>
+    <script src="js/style.js"></script>
+
+    
+
+
+
+</body>
+</html>
