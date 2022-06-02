@@ -40,6 +40,7 @@
             height: 200px;
             background-color: lightcoral;
             margin: 0 auto;
+            transition-duration: 0.5s;
         }
 
 
@@ -49,7 +50,8 @@
 
         .round{
             transform: scale(2);
-            border-radius: 50%;
+            border-radius: 50%;       
+            background-color: coral;     
         }
 
 
@@ -79,25 +81,40 @@
         (function(){
 
             const header = document.querySelector('header')
+            const conEl = document.querySelector('.container')
+            const boxEl = document.querySelector('.box')
 
-            const handleScroll = () => {
+            const handleScrollHeader = () => {
                 const sct = window.pageYOffset;               
 
                 header.innerHTML = sct;
 
-                // if(sct > 300){
-                //     header.classList.add('active');
-                // }else{
-                //     header.classList.remove('active');
-                // }
+                if(sct > 300){
+                    header.classList.add('active');
+                }else{
+                    header.classList.remove('active');
+                }               
+            }
+            
+            const handleScrollBox = () => {
 
                 // * 컨테이너가 top에 도달하였을때 box가 둥글게 변경
 
-                if
+                // console.log(
+                //     conEl.getBoundingClientRect().top
+                // )
 
+                const conTop = conEl.getBoundingClientRect().top;
+
+                if(conTop <= 0){
+                    boxEl.classList.add('round')
+                }else{
+                    boxEl.classList.remove('round');
+                }
             }
 
-            window.addEventListener('scroll', handleScroll)
+            window.addEventListener('scroll', handleScrollHeader)
+            window.addEventListener('scroll', handleScrollBox)
 
            
 
